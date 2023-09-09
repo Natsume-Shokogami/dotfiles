@@ -177,7 +177,7 @@ bindsym $mod+d exec --no-startup-id fuzzel
 #bindsym $mod+Ctrl+q exec --no-startup-id ~/.config/rofi/applets/bin/quicklinks.sh
 #bindsym $mod+Ctrl+s exec --no-startup-id ~/.config/rofi/applets/bin/screenshot.sh
 
-output "*" bg ~/.config/sway/youmu.jpg fill
+output "*" bg ~/.config/gtklock/background.jpg fill
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
