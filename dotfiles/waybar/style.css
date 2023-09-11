@@ -37,16 +37,16 @@ window#waybar.hidden {
 #workspaces button {
 	transition: none;
 	color: #B5E8E0;
-	background: transparent;
 	font-size: 16px;
+	background:transparent;
 	border-radius: 2px;
 }
 
 #workspaces button.occupied {
 	transition: none;
 	color: #F28FAD;
-	background: transparent;
 	font-size: 4px;
+	background:transparent;
 }
 
 #workspaces button.focused {

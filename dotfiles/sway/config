@@ -10,6 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $term alacritty
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -40,6 +41,9 @@ exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #Start fcitx5 daemon
 #exec --no-startup-id "fcitx5 -dr"
 
+#Start mako
+exec --no-startup-id mako
+
 #Border size, no title bar, 0 pixel
 default_border pixel 0
 default_floating_border pixel 0
@@ -61,7 +65,7 @@ floating_modifier $mod
 tiling_drag modifier
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec $term
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -70,10 +74,9 @@ bindsym $mod+Shift+q kill
 #bindsym $mod+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
 #bindcode $mod+40 exec "rofi -modi drun,run -show drun"
-# There also is i3-dmenu-desktop which only displays applications shipping a
-# .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
-#bindsym $mod+d exec --no-startup-id rofi -show run -config ~/.config/rofi/config.rasi
+
+#start nwg-drawer
+bindsym $mod+d exec --no-startup-id nwg-drawer
 
 # change focus
 bindsym $mod+j focus left
@@ -172,12 +175,7 @@ bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
-#Rofi custom applets, launchers and power menu
-bindsym $mod+d exec --no-startup-id fuzzel
-#bindsym $mod+Ctrl+q exec --no-startup-id ~/.config/rofi/applets/bin/quicklinks.sh
-#bindsym $mod+Ctrl+s exec --no-startup-id ~/.config/rofi/applets/bin/screenshot.sh
-
-output "*" bg ~/.config/gtklock/background.jpg fill
+#output "*" bg ~/.config/gtklock/background.jpg fill
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -234,6 +232,7 @@ bindsym $mod+plus scratchpad show
 no_focus [class="plasmashell" window_type="notification"]
 
 for_window [title="Desktop @ QRect.*"] kill; floating enable; border none
+for_window [app_id="alacrity"] opacity 0.9
 
 # Transparency
 #exec /usr/share/sway/scripts/inactive-windows-transparency.py --opacity 0.85
@@ -242,3 +241,37 @@ for_window [title="Desktop @ QRect.*"] kill; floating enable; border none
 blur enable
 blur_radius 8
 corner_radius 8
+default_dim_inactive 0.2
+shadows enable
+scratchpad_minimize disable
+
+### Idle configuration
+#
+# Example configuration:
+#
+exec swayidle -w \
+         timeout 650   'gtklock -d' \
+         timeout 800  'swaymsg "output * dpms off"' \
+         resume        'swaymsg "output * dpms on"' \
+         before-sleep  'gtklock -d' 
+
+# This will lock your screen after 650 seconds of inactivity, then turn off
+# your displays after another 150 seconds, and turn your screens back on when
+# resumed. It will also lock your screen before your computer goes to sleep.
+
+#For systemd users
+include /etc/sway/config.d/*
+
+# Applies all generated settings (from swaysettings-git)
+include ~/.config/sway/.generated_settings/*.conf
+
+# Launches sway-wallpaper when setting wallpaper from swaymsg.
+# Without this, swaybg would launch instead...
+swaybg_command sway-wallpaper
+
+# To apply the selected wallpaper
+exec_always sway-wallpaper -i ~/.cache/wallpaper -m fill
+
+# Start all of the non-hidden applications in ~/.config/autostart
+# This executable is included in the swaysettings package
+exec sway-autostart

@@ -32,14 +32,14 @@ window {
 
 #clock-label {
   min-width: 320px;
-  background-color: alpha(@color4, 0.1);
+  background-color: alpha(@color2, 0.1);
   color: @color4;
   font-weight: 500;
-  font-size: 9pt;
-  padding: 10px 30px;
+  font-size: 15px;
+  padding: 8px 30px;
   margin-bottom: 10px;
   border-radius: 0 0 10px 10px;
-  border: 1px solid alpha(@color4, 0.5);
+  border: 1px solid alpha(@color2, 0.5);
   border-top: 0;
 }
 
@@ -68,8 +68,8 @@ window {
 
 #unlock-button {
   border-radius: 20px;
-  background-color: alpha(@color4, 0.1);
+  background-color: alpha(@color2, 0.1);
   color: @color4;
   border-radius: 25px;
-  border: 1px solid alpha(@color4, 0.5);
+  border: 1px solid alpha(@color2, 0.5);
 }
