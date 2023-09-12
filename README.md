@@ -6,4 +6,5 @@ __**Warnings**__: These packages are named in Arch-based systems, other distro f
 3. Nvim: AstroNvim (from Github)
 4. Lockscreen: Gtklock, Swayidle
 5. Screenshot: gscreenshot
-6. Others: Pipewire-pulse/Pulseaudio, and checkupdates modules will only work on Arch-based systems.
+6. Terminal: Alacritty
+7. Others: Pipewire-pulse/Pulseaudio, and checkupdates modules will only work on Arch-based systems.
