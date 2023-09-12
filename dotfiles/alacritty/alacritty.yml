@@ -25,13 +25,14 @@ font:
 colors:
   # Default colors
   primary:
-    background: '0x1E1D2F'
-    foreground: '0xD9E0EE'
+    #background: '0x1E1D2F'
+    background: '0xD9E0EE'
+    foreground: '0x6E6C7E'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    text: '0x1E1D2F'
-    cursor: '0xF5E0DC'
+    text: '0x89DCEB'
+    cursor: '0x988BA2'
 
   # Normal colors
   normal:
