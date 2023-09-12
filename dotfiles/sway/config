@@ -254,11 +254,21 @@ exec swayidle -w \
          timeout 650   'gtklock -d' \
          timeout 800  'swaymsg "output * dpms off"' \
          resume        'swaymsg "output * dpms on"' \
-         before-sleep  'gtklock -d' 
+         before-sleep  'gtklock -d'
+
+#For systemd users, you may need to edit /etc/systemd/logind.conf so that pressing power button will only suspend instead of power off 
+#(so that you don't accidentally turn off the computer and lose your work)
+#Idk about other init systems since I don't use a window manager on them (even though I have a Void Linux partition, I'm lazy to config the WM
+#so I use Xfce and KDE Plasma instead), don't ask me for that but you may get that sway don't take control of the power keys and lid actions.
+#Edit: It seems like in some non-systemd distros with elogind (Artix, Void, Gentoo, MX,...), elogind may inhibit the power button so the above may apply.
+#Though Idk how to do that if your distro take even further and remove elogind altogether...
 
 # This will lock your screen after 650 seconds of inactivity, then turn off
 # your displays after another 150 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
+
+#Change cursor theme and size:
+seat seat0 xcursor_theme Yaru 24
 
 #For systemd users
 include /etc/sway/config.d/*
