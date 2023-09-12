@@ -76,6 +76,7 @@ bindsym $mod+Shift+q kill
 #bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 
 #start nwg-drawer
+exec --no-startup-id "nwg-drawer -r"
 bindsym $mod+d exec --no-startup-id nwg-drawer
 
 # change focus
