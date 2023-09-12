@@ -2,6 +2,7 @@
 * {
     font-family: Fantasque Sans Mono;
     font-size: 15px;
+    color: #424242;
 }
 
 window {
@@ -13,14 +14,14 @@ window {
 
 /* search entry */
 entry {
-    background-color: rgba (0, 0, 0, 0.14);
+    background-color: rgba (0, 0, 0, 0.34);
     border: 2px solid #9d03fc;
 }
 
 button {
     background: none;
     background-color: rgba (171, 233, 179, 0.95);
-    color: #141414;
+    color: #424242;
     border: solid 2px #abe9b3;
     border-radius: 0;
 }
