@@ -5,6 +5,7 @@ __**Warnings**__: These packages are named in Arch-based systems, other distro f
 2. Bar: Nwg-bar, Nwg-drawer, Swaysettings-git, Waybar
 3. Nvim: AstroNvim (from Github)
 4. Lockscreen: Gtklock, Swayidle
-5. Screenshot: gscreenshot
-6. Terminal: Alacritty
-7. Others: Pipewire-pulse/Pulseaudio, and checkupdates modules will only work on Arch-based systems.
+5. Notification: Mako
+6. Screenshot: gscreenshot
+7. Terminal: Alacritty
+8. Others: Pipewire-pulse/Pulseaudio, and checkupdates modules will only work on Arch-based systems.
