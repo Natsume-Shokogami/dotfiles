@@ -1,0 +1,10 @@
+on-button-middle=dismiss-group
+background-color=#fa4b3ebb
+font=Fantasque Sans Mono 12
+padding=10,10,10,10
+border-size=0
+border-color=#fa4b3ebb
+border-radius=10
+progress-color=#6095f0bb
+max-icon-size=48
+
