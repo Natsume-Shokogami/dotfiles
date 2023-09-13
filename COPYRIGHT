@@ -1,0 +1,17 @@
+# The redistribution of this software in the binary and source code form are under the license below 
+The gtklock config use some parts from nullxception/dotfiles, licensed under BSD 3-Clause license: 
+https://github.com/nullxception/dotfiles
+
+The nvim config and other files in ./dotfiles/nvim is AstroNvim based on GPL-3.0 license
+https://github.com/AstroNvim/AstroNvim 
+
+Alacritty's and waybar's config, as well as the pictures inside ./dotfiles/waybar are based on theCode-Breaker's riverwm repo licensed under GPL-3.0 license 
+https://github.com/theCode-Breaker/riverwm 
+
+My Nwg-bar and nwg-drawer's config are based on default configuration files and other resources  from nwg-bar and nwg-drawer both licensed under MIT license 
+
+Other source codes, including my sway, nwg-bar, nwg-drawer, and files in ./dotfiles/sway/.generated-settings (GPL-3.0 doesn't cover files generated from GPL softwares unless these files includes parts of source code from GPL-licensed softwares) are licensed under BSD 2-Clause 
+
+All the pictures in this repository, except those covered in the license above are belong to the corresponding to the copyright holders as "all right reserved", and are here for demonstrative non-commercial purpose covered as fair use under U.S. Congress' Copyright Act of 1976, including and not exclusively commentary, critism, parody, new reporting, research, scholarship. 
+
+You may need to remove those files before redistributing unless you have permission from the copyright holders. 
