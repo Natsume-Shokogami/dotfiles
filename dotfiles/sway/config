@@ -224,7 +224,8 @@ for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 for_window [window_role="About"] floating enable
 for_window [class="xdman-Main" ] floating enable
-for_window [class="GParted"] floating enable 
+for_window [class="GParted"] floating enable
+for_window [class="alacritty"] opacity 0.85 
 
 #  scratchpad
 bindsym $mod+minus move scratchpad
@@ -236,7 +237,7 @@ for_window [title="Desktop @ QRect.*"] kill; floating enable; border none
 for_window [app_id="alacrity"] opacity 0.9
 
 # Transparency
-#exec /usr/share/sway/scripts/inactive-windows-transparency.py --opacity 0.85
+exec --no-startup-id /usr/share/swayfx/scripts/inactive-windows-transparency.py --opacity 0.85
 
 #Swayfx unique config
 blur enable
