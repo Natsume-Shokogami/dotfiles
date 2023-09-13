@@ -1,8 +1,8 @@
 
 * {
 	border: none;
-	border-radius: 8;
-    font-family: "Fantasque Sans Mono" ;
+	border-radius: 8px;
+    font-family: "Fantasque Sans Mono", "JetBrains Mono Nerd Font", "Ubuntu", "Carlito" ;
 	font-size: 15px;
 	min-height: 10px;
 }
@@ -26,7 +26,7 @@ window#waybar.hidden {
 }
 #workspace {
 	margin-top: 6px;
-	margin-left: 12px;
+	margin-left: 10px;
 	font-size: 4px;
 	margin-bottom: 0px;
 	border-radius: 10px;

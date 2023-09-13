@@ -85,7 +85,7 @@
     },
     "custom/launcher":{
         "format": " ",
-        "on-click": "nwg-drawer -r -mt 30 -mr 30 -mb 30 -ml 30 -is 48",
+        "on-click": "nwg-drawer",
         "on-click-middle": "killall nwg-drawer"
     },
     "custom/power":{
